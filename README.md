@@ -1,5 +1,8 @@
 # ConfigMgr-Run-Script
-Scripts to use in SCCM/MEMCM when right-clicking on and choosing "Run Script"
+Scripts to use in SCCM/MEMCM when right-clicking on and choosing "Run Script".
+You can use these scripts on individual devices or for a collection of devices. 
+Performing remote management on systems without creating an RDP session or inturupting users is always prefered. 
+
 
 ## [RunScript - Running Process.ps1](RunScript%20-%20Running%20Process.ps1)
 This script allows specifying a process to lookup on devices. It will return PID, CPU Usage (%), RAM Usage (MB) and Start Time for each instance of the proces found. 
@@ -11,3 +14,6 @@ The output will be in JSON format. You can copy/paste the results to a new text 
 
 ## [RunScript - Internet Speedtest.ps1](RunScript%20-%20Internet%20Speedtest.ps1)
 This script will download (only first time) the SpeedtestCLI from Ookla's website, then execute silently. When run again, it will check if the file already exists before downloading again. The output will return up/down speeds and latency for the device. 
+
+## [RunScript - Registry Key Check-Change.ps1](RunScript%20-%20Registry%20Key%20Check-Change.ps1)
+This script can check or change existing registry entries on a system. The script only works for **HKEY_LOCAL_MACHINE**, **HKEY_CLASSES_ROOT** or **HKEY_CURRENT_USER** registry hives at this time. HKEY_USERS gets too complicated and since those entries aren't likely applied in bulk, it made more sense to leave off for the time being. 
