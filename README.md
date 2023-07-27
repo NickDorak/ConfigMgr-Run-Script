@@ -2,7 +2,7 @@
 Scripts to use in SCCM/MEMCM when right-clicking on and choosing "Run Script".
 You can use these scripts on individual devices or for a collection of devices. 
 Performing remote management on systems without creating an RDP session or inturupting users is always prefered. 
-
+.
 
 ## [RunScript - Running Process.ps1](RunScript%20-%20Running%20Process.ps1)
 This script allows specifying a process to lookup on devices. It will return PID, CPU Usage (%), RAM Usage (MB) and Start Time for each instance of the proces found. 
@@ -17,3 +17,15 @@ This script will download (only first time) the SpeedtestCLI from Ookla's websit
 
 ## [RunScript - Registry Key Check-Change.ps1](RunScript%20-%20Registry%20Key%20Check-Change.ps1)
 This script can check or change existing registry entries on a system. The script only works for **HKEY_LOCAL_MACHINE**, **HKEY_CLASSES_ROOT** or **HKEY_CURRENT_USER** registry hives at this time. HKEY_USERS gets too complicated and since those entries aren't likely applied in bulk, it made more sense to leave off for the time being. 
+
+## [RunScript - Services - Change Startup Type.ps1](RunScript%20-%20Services%20-%20Change%20Startup%20Type.ps1)
+This script will change a service start type (between Automatic, AutomicDelay, Manual & Disabled). It will also start, stop or restart the service if required. 
+
+## [RunScript - Services - Stop_Start_Restart.ps1](RunScript%20-%20Services%20-%20Stop_Start_Restart.ps1)
+This script will also start, stop or restart a service on the target machine. 
+
+## [RunScript - Last Reboot_Uptime.ps1](RunScript%20-%20Last%20Reboot_Uptime.ps1)
+This script outputs the date and time the system was rebooted last
+
+## [RunScript - System UpTime.ps1](RunScript%20-%20System%20UpTime.ps1)
+This script checks how long a system has been running for and reports back in Days, Hours, Minutes, etc.
