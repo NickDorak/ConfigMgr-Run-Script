@@ -2,7 +2,7 @@
 Scripts to use in SCCM/MEMCM when right-clicking on and choosing "Run Script".
 You can use these scripts on individual devices or for a collection of devices. 
 Performing remote management on systems without creating an RDP session or inturupting users is always prefered. 
-.
+
 
 ## [RunScript - Running Process.ps1](RunScript%20-%20Running%20Process.ps1)
 This script allows specifying a process to lookup on devices. It will return PID, CPU Usage (%), RAM Usage (MB) and Start Time for each instance of the proces found. 
